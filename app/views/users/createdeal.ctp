@@ -9,11 +9,28 @@
 			        currency: "EUR",
 					q: 'iphone 4S'
 			    },
-			dateType: 'json',
+			crossDomain: true,
+			dataType: 'jsonp',
 			success: function(msg){
-				console.debug(msg);
+				analizza(msg);
 			}
 		});
+		function analizza(data) {
+			console.debug(data);
+	        $.each(data.items, function(i, item){
+	            if (item.product.images.length > 0){
+	                link = item.product.images[0]['link']; // cache value
+	                var img = $("<img/>").attr("src", link);
+					img.attr('width', 200);
+	                var a = $("<a/>").attr({href: link, title: "nome del prodotto"}).append(img);
+	            }
+				var price = $('<p/>').html(item.product.inventories[0].price);
+				var ship = $('<p/>').html(item.product.inventories[0].shipping);
+				$('<div/>').append(price).append(ship).append(a).appendTo('#target');
+				
+				
+			});
+	    }
 		
 		$('#UsersSearchpriceForm').submit(function(){
 			var link = $(this).attr('action');
