@@ -1,3 +1,4 @@
+<?php echo $this->Html->css('createdeal_table'); ?>
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$.ajax({
@@ -18,15 +19,19 @@
 		function analizza(data) {
 			console.debug(data);
 	        $.each(data.items, function(i, item){
+				var ul = $('<ul/>');
 	            if (item.product.images.length > 0){
 	                link = item.product.images[0]['link']; // cache value
+					var li = $('<li/>');
 	                var img = $("<img/>").attr("src", link);
-					img.attr('width', 200);
+					img.attr({'width':100, 'height': 90});
 	                var a = $("<a/>").attr({href: link, title: "nome del prodotto"}).append(img);
 	            }
-				var price = $('<p/>').html(item.product.inventories[0].price);
-				var ship = $('<p/>').html(item.product.inventories[0].shipping);
-				$('<div/>').append(price).append(ship).append(a).appendTo('#target');
+				var price = $('<p/>').html(item.product.inventories[0].price).attr('class', 'price_style');
+				var ship = $('<p/>').html(item.product.inventories[0].shipping).attr('class', 'ship_style');
+				li.append(price).append(ship).append(a);
+				ul.append(li);
+				$('<div/>').attr({'class':'result_deal_product'}).append(ul).appendTo('#target');
 				
 				
 			});

@@ -1,0 +1,11 @@
+.result_deal_product{
+	width: 400px;
+	border:1px solid #ddd;
+}
+.result_deal_product ul li{
+	width: 400px;
+	display: block;
+}
+.result_deal_product ul li p{
+	display: block;
+}
