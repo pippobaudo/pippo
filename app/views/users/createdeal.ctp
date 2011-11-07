@@ -1,5 +1,4 @@
 <?php echo $this->Html->script('facebox/facebox'); ?>
-<?php echo $this->Html->css('createdeal_table'); ?>
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$('#UsersSearchpriceForm').submit(function(){
@@ -11,8 +10,7 @@
 				        country: "IT", 
 				        language: "it", 
 				        currency: "EUR",
-						maxResults: '4',
-						rankBy: 'relevancy',
+						maxResults: '5',
 						q: query
 				    },
 				crossDomain: true,
@@ -25,7 +23,6 @@
 		});
 		function analizza(data) {
 			$('#target').html('');
-			console.debug(data);
 	        $.each(data.items, function(i, item){
 				var ul = $('<ul/>');
 	            if (item.product.images.length > 0){
@@ -33,14 +30,14 @@
 					var li = $('<li/>');
 	                var img = $("<img/>").attr("src", link);
 					img.attr({'width':100, 'height': 90});
-	                var a = $("<a/>").attr({href: link, title: "nome del prodotto"}).append(img);
 	            }
-				var price = $('<p/>').html(item.product.inventories[0].price).attr('class', 'price_style');
-				var ship = $('<p/>').html(item.product.inventories[0].shipping).attr('class', 'ship_style');
-				li.append(price).append(ship).append(a);
+				var price = $('<p/>').html(item.product.inventories[0].price).attr('class', 'price_style grid_2');
+				var ship = $('<p/>').html(item.product.inventories[0].shipping).attr('class', 'ship_style grid_3');
+				var scelta = $('<a/>').html('questo').attr('class', 'button');
+				li.append(price).append(ship).append(img).append(scelta);
 				ul.append(li);
 				$('<div/>').attr({'class':'result_deal_product'}).append(ul).appendTo('#target');
-				$.facebox({ div: '#target' });
+				$.facebox({ div: '#target_container' });
 				
 			});
 	    }
@@ -53,7 +50,18 @@
 <div class="clear"></div>
 
 <div class="grid_16 section">
-	<div id="target" style="display:none;"></div>
+	<div id="target_container" style="display:none;">
+		<div id="inner_target_container">
+			<div id="header_target_container">
+				<div class="grid_3">Prezzo</div>
+				<div class="grid_3">Spedizione</div>
+				<div class="grid_3">Immagine</div>
+				<div class="grid_3">Scelta</div>
+			</div>
+			<div class="clear"></div>
+			<div id="target"></div>
+		</div>
+	</div>
 	<h1>Quale prodotto stai cercando ?</h1>
 	<?php echo $this->Form->create('Users', array('action'=>'searchprice')); ?>
 	<?php echo $this->Form->input('Search', array('label'=>false, 'placeholder'=>'Scrivi ciò che vorresti comprare ad un prezzo scontato')); ?>

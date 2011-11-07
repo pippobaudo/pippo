@@ -1324,6 +1324,63 @@ a
 	border: 1px solid #ddd;
 }
 
+
+/* ========================================================================
+   DEAL CREATION
+   ========================================================================== */
+#target_container .grid_2, #target_container .grid_3{
+
+}
+#inner_target_container{
+	width: 400px;
+	padding: 20px;
+}
+#inner_target_container .grid_3{
+	width: 90px;
+	margin-right: 0;
+	text-align: center;
+}
+#inner_target_container #header_target_container{
+	float: left;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: #444;
+}
+.result_deal_product ul{
+	border-bottom:1px solid #ddd;
+}
+.result_deal_product ul li{
+	margin: 10px 0 10px;
+}
+.result_deal_product ul li img{
+	width: 80px;
+}
+.result_deal_product ul li a.button{
+	margin-top: 35px;
+	float: right;
+}
+
+.result_deal_product ul li p{
+	float: left;
+}
+.result_deal_product ul li p.price_style{
+	font-size: 30px;
+	font-weight: bold;
+	color: #444;
+	margin-top: 35px;
+	margin-left: 20px;
+	width: 80px;
+}
+.result_deal_product ul li p.ship_style{
+	font-size: 30px;
+	font-weight: bold;
+	color: #444;
+	margin-top: 35px;
+	margin-left: 20px;
+	width: 80px;
+}
+
+
 /* ========================================================================
    BUTTONS STYLE
    ========================================================================== */
