@@ -1,26 +1,19 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
-		alert('ciao');
-		$.getJSON(
-		    "https://www.googleapis.com/shopping/search/v1/public/products?callback=?",
-		    {
-		        key: "redacted", 
-		        country: "US", 
-		        q: "mp3 player", 
-		        alt: "json" 
-		    },
-		    function(data) {
-				alert(data);
-		        $.each(data.items, function(i, item){
-		            if (item.product.images.length > 0) // sanity check
-		            {
-		                link = item.product.images[0]['link']; // cache value
-		                var img = $("<img/>").attr("src", link);
-		                $("<a/>").attr({href: link, title: "Courtesy of Flicker"}).append(img).appendTo("#target");
-		            }
-		        });
-		    }
-		);
+		$.ajax({
+		    url: "https://www.googleapis.com/shopping/search/v1/public/products?",
+			data: {
+			        key: "AIzaSyBqDwgk5rGJcQ1gFY4pgz2whdoxqwm5WFU", 
+			        country: "IT", 
+			        language: "it", 
+			        currency: "EUR",
+					q: 'iphone 4S'
+			    },
+			dateType: 'json',
+			success: function(msg){
+				console.debug(msg);
+			}
+		});
 		
 		$('#UsersSearchpriceForm').submit(function(){
 			var link = $(this).attr('action');
@@ -41,6 +34,7 @@
 				}
 			})
 		});
+		
 	});
 </script>
 <div class="grid_16" id="slogan">
