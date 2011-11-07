@@ -12,8 +12,13 @@
 	</div>
 	<div class="clear"></div>
 	<div class="grid_16 box_user_commands">
-		<?php echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout'), array('class'=>'button save')); ?>
-		<a href="#" class="button delete">Delete</a>
+		<div class="grid_4 border">
+			<?php echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout'), array('class'=>'button save')); ?>
+			<a href="#" class="button delete">Delete</a>
+		</div>
+		<div class="grid_4">
+			<?php echo $this->Html->link('Creazione Deal', array('controller' => 'users', 'action' => 'createdeal'), array('class'=>'button add')); ?>
+		</div>
 	</div>
 </div>
 <div class="clear"></div>
