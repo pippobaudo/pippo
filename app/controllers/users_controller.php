@@ -80,13 +80,6 @@ class UsersController extends AppController {
 			if($this->Auth->login($this->data)) {
 	        	$this->Session->setFlash('You are logged in!', 'default', array('class' => 'success'));
 				$this->redirect($this->Auth->loginRedirect);
-			}else{
-				//  $this->Auth->authenticate = ClassRegistry::init('User');    DA CONTROLLARE QUESTA SOLUZIONE
-				$this->Auth->userModel = 'Retailer';
-				if($this->Auth->login($this->data)){
-					$this->Session->setFlash('You are logged in!', 'default', array('class' => 'success'));
-					$this->redirect($this->Auth->loginRedirect);
-				}
 			}
 		}
 	}
@@ -193,4 +186,25 @@ class UsersController extends AppController {
 	function createdeal(){
 		
 	}
+	
+	
+	function retailer_login() {
+	
+	$this->Auth->userModel = 'Retailer';
+	debug($this->Auth->user());
+	if($this->Auth->login($this->data)){
+		$this->Session->setFlash('You are logged in!', 'default', array('class' => 'success'));
+		$this->redirect($this->Auth->loginRedirect);
+	}
+	
+	}	
+	
+	function retailer_logout() {
+		
+		$this->Session->destroy();
+		$this->Session->setFlash('Logout effettuato con successo', 'default', array('class' => 'alert_info'));
+		$this->redirect($this->Auth->logout());
+	
+	}
+	
 }

@@ -55,29 +55,23 @@ class PagesController extends AppController {
 	}
 */
 
-function index(){
+function index() {}
 
-}
+function how_it_works() {}
 
-function how_it_works(){
+function login() {}
 
-}
-
-function login(){
-	
-}
-
-function browse_deals(){
-	
-}
+function browse_deals() {}
 
 
-function join_email(){
-	
-}
+function join_email() {}
 
-function blog(){
-	
+function blog() {}
+
+function retailer_index() {
+
+
+
 }
 
 
