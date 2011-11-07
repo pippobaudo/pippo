@@ -1,0 +1,43 @@
+div.switch {
+	display:inline-block;
+	width: 130px;
+	height: 36px;
+	text-align: center;
+	background: url(../img/checkbox/switch_track.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: 10px 0;
+	-webkit-tap-highlight-color: transparent;
+	
+}
+div.switch  div.thumb {
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 31px;
+	background: url(../img/checkbox/switch_thumb.png);
+	background-repeat: no-repeat;
+	bottom: 33px;
+	left: -30px;
+}
+
+div.switch span {
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 36px;
+}
+
+.green {
+	color: #a2c66c;
+	background: transparent;
+	padding-right: 25px;
+}
+.red {
+	
+	color: #d87767;
+
+	
+}
+
