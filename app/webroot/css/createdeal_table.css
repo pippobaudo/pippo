@@ -1,11 +1,30 @@
-.result_deal_product{
-	width: 400px;
-	border:1px solid #ddd;
+.result_deal_product ul{
+	width: 270px;
+	border-bottom:1px solid #ddd;
 }
 .result_deal_product ul li{
-	width: 400px;
-	display: block;
+	width: 270px;
+	display: inline-table;
+	vertical-align: top;
 }
 .result_deal_product ul li p{
-	display: block;
+	float: left;
+}
+.result_deal_product ul li p.price_style{
+	font-size: 30px;
+	font-weight: bold;
+	color: #444;
+	margin-left: 20px;
+	margin-top: 35px;
+}
+.result_deal_product ul li p.ship_style{
+	font-size: 30px;
+	font-weight: bold;
+	color: #444;
+	margin-top: 35px;
+	margin-left: 20px;
+}
+
+.result_deal_product ul li img{
+	float: right;
 }
