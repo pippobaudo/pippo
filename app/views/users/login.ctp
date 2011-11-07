@@ -14,6 +14,6 @@
 			<?php echo $this->Form->end(__('Login', true)) ;?>
 		</div>
 		<div class="clear"></div>
-		<div class="prefix_3 grid_8 line_info">Se non hai ancora un account, cosa aspetti ? <?php echo $this->Html->link('Iscriviti', array('controller'=>'pages', 'action'=>'join'), array('class'=>'button')); ?></div>
+		<div class="prefix_3 grid_8 line_info">Se non hai ancora un account, cosa aspetti ? <?php echo $this->Html->link('Iscriviti', array('controller'=>'users', 'action'=>'signup'), array('class'=>'button')); ?></div>
 	</div>
 </div>

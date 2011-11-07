@@ -39,11 +39,18 @@
 			} 
 			?>
         </li>
+		<?php 
+        	echo '<li>';
+        	if ( $isLogged ) {
+ 				echo $this->Html->image('avatar.png', array('alt' => 'Image mini User', 'width'=>30));
+        	}
+			echo '</li>';
+		?>
         <li>
         	<?php 
         	if ( !$isLogged ) {
         		echo $this->Html->link('Join in', array('controller'=>'users', 'action'=>'signup'), array('id'=>'join-groupin')); 
-        	} else { 
+        	} else {
         		echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout'), array('id'=>'join-groupin'));
         		} 
         	?>

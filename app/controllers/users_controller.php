@@ -183,7 +183,10 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 	
+	
+	
 	function createdeal(){
+		$this->set('user', $this->Auth->user());
 		
 	}
 	

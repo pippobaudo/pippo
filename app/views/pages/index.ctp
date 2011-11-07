@@ -36,13 +36,9 @@
 	</div>
 </div>
 <div class="clear"></div>
-<div class="grid_16 section search_front">
-	<h1>Quale prodotto stai cercando ?</h1>
-	<?php echo $this->Form->create('Pages'); ?>
-	<?php echo $this->Form->input('Search', array('label'=>false, 'placeholder'=>'Scrivi ciò che vorresti comprare ad un prezzo scontato')); ?>
-	<?php echo $this->Form->end('Search', array('class'=>'submit_front')); ?>
-	<p class="suggestion">Premi invio</p>
-</div>
+
+	<?php echo $this->element('box_search_product'); ?>
+
 <div class="clear"></div>
 <div class="grid_16 section friends">
 	<?php echo $this->Html->image('friends_front.jpg', array('alt'=>'Friends list')); ?>

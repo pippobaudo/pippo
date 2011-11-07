@@ -383,8 +383,9 @@ a.map {
 #header #nav li a{float:left;padding:0 20px; text-decoration: none; font-weight: bold;}
 #header li.selected a{background: #ffca00;}
 #header #alt-nav{position:absolute;top:5px;right:50%;margin-right:-485px;line-height:50px;height:50px;font-size:12px;}
-#header #alt-nav li{float:left; font-weight: bold; text-decoration: none; margin-right: 20px;}
+#header #alt-nav li{ float: left; font-weight: bold; text-decoration: none; margin-right: 20px;}
 #header #alt-nav li #join-groupin{display:block;background: #00c7e5;color:#fff;height:30px;line-height:30px;margin:10px 0 10px 2px;padding:0 18px;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;font-weight:bold; text-decoration: none;}
+#header #alt-nav li img{vertical-align: middle;}
 #header.small div{position:relative;width:720px}
 #header.small #alt-nav{position:absolute;top:0px;right:0px;margin-right:0;line-height:50px;height:50px;font-size:12px}
 #header form{float:left;padding:13px 20px;border-right:1px solid #f3f3f3;height:24px}

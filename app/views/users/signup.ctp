@@ -54,11 +54,23 @@
 			<?php echo $this->Html->image('user.jpg', array('alt'=>'i am a user', 'style'=>'float:left;')); ?>
 			<h1 class="slogan">I'm a user</h1>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<?php echo $this->Html->link(
+					$this->Html->image('fb-button.png', array('alt'=> __('Login with facebook', true), 'border' => '0')),
+					'http://apps.facebook.com/sign_in_with_facebook',
+					array('target' => '_blank', 'escape' => false)
+				);
+			?>
 		</div>
 		<div id="i_am_seller" class="grid_7 block" style="display:none;">
 			<?php echo $this->Html->image('retailer.jpg', array('alt'=>'i am a retailer', 'style'=>'float:left;')); ?>
 			<h1 class="slogan">I'm a retailer</h1>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<?php echo $this->Html->link(
+					$this->Html->image('fb-button.png', array('alt'=> __('Login with facebook', true), 'border' => '0')),
+					'http://apps.facebook.com/sign_in_with_facebook',
+					array('target' => '_blank', 'escape' => false)
+				);
+			?>
 		</div>
 		<div class="clear"></div>
 		<div class="prefix_3 grid_7">
@@ -104,5 +116,6 @@
 		<?php echo $this->Form->input('lon', array('type'=>'hidden', 'id'=>'lon')); ?>
 		<?php echo $this->Form->end('Sign up'); ?>
 	</div>
+
 </div>
 <div class="clear"></div>
